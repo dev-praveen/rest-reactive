@@ -1,5 +1,7 @@
 package com.praveen.reactive.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
@@ -9,7 +11,9 @@ import org.springframework.data.relational.core.mapping.Table;
 import java.time.LocalDate;
 
 @Getter
+@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 @Table("employees")
 public class Employee {
 

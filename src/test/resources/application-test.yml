@@ -1,0 +1,14 @@
+spring:
+  r2dbc:
+    url: r2dbc:tc:postgresql:///test?TC_IMAGE_TAG=15.3
+    username: test
+    password: test
+  sql:
+    init:
+      mode: ALWAYS
+      schema-locations:
+        - classpath:/data/schema.sql
+        - classpath:/data/testData.sql
+  jpa:
+    hibernate:
+      ddl-auto: 'create-drop'

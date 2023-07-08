@@ -25,6 +25,7 @@ dependencies {
 	implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:2.1.0")
 	implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
 	implementation("org.springframework.boot:spring-boot-starter-webflux")
+	implementation("org.springframework.boot:spring-boot-starter-web")
 	compileOnly("org.projectlombok:lombok")
 	runtimeOnly("org.postgresql:postgresql")
 	runtimeOnly("org.postgresql:r2dbc-postgresql")
@@ -33,8 +34,9 @@ dependencies {
 	testImplementation("io.projectreactor:reactor-test")
 	testImplementation("org.assertj:assertj-core:3.24.2")
 	testImplementation("org.springframework.boot:spring-boot-testcontainers")
-	//testImplementation("org.testcontainers:junit-jupiter")
+	testImplementation("org.testcontainers:junit-jupiter")
 	testImplementation("org.testcontainers:postgresql:1.18.3")
+	testImplementation("org.testcontainers:r2dbc:1.18.3")
 }
 
 tasks.withType<Test> {
